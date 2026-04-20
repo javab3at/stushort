@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 import ThemeSwitcher from "./ThemeSwitcher";
+import Logo from "./Logo";
 
-const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t||!['fun','dark','metallic'].includes(t))t='fun';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','fun');}})();`;
+const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t||!['fun','dark','metallic'].includes(t))t='dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`;
 
 export const metadata: Metadata = {
   title: "Stu Short Photography — Landscape & severe-weather photography",
@@ -23,8 +24,8 @@ export default function RootLayout({
       </head>
       <body>
         <header className="site-header">
-          <Link href="/" className="brand">
-            Stu Short Photography
+          <Link href="/" className="brand" aria-label="Stu Short Photography — home">
+            <Logo />
           </Link>
           <nav className="nav">
             <Link href="/#work">Work</Link>

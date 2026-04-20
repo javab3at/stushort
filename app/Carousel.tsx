@@ -96,7 +96,19 @@ export default function Carousel({ photos, autoplayMs = 6000 }: Props) {
             onClick={prev}
             aria-label="Previous slide"
           >
-            <span aria-hidden>‹</span>
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.25"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
           </button>
           <button
             type="button"
@@ -104,7 +116,19 @@ export default function Carousel({ photos, autoplayMs = 6000 }: Props) {
             onClick={next}
             aria-label="Next slide"
           >
-            <span aria-hidden>›</span>
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.25"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
           </button>
 
           <div className="carousel-dots" role="tablist">

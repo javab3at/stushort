@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { portfolio } from "@/lib/portfolio";
 import Carousel from "./Carousel";
+import LatestVideo from "./LatestVideo";
 
 const featured = portfolio.slice(0, 4);
 const archive = portfolio.slice(4);
@@ -41,6 +42,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <LatestVideo />
 
       <section id="about" className="section">
         <div className="about">
