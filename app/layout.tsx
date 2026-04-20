@@ -3,6 +3,7 @@ import Link from "next/link";
 import "./globals.css";
 import ThemeSwitcher from "./ThemeSwitcher";
 import Logo from "./Logo";
+import MobileMenu from "./MobileMenu";
 
 const themeInitScript = `(function(){try{var t=localStorage.getItem('theme');if(!t||!['fun','dark','metallic'].includes(t))t='dark';document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','dark');}})();`;
 
@@ -28,11 +29,12 @@ export default function RootLayout({
             <Logo />
           </Link>
           <nav className="nav">
-            <Link href="/#work">Work</Link>
-            <Link href="/#video">Video</Link>
-            <Link href="/#about">About</Link>
-            <Link href="/book">Enquire</Link>
+            <Link href="/#work" className="nav-link">Work</Link>
+            <Link href="/#video" className="nav-link">Video</Link>
+            <Link href="/#about" className="nav-link">About</Link>
+            <Link href="/book" className="nav-link">Enquire</Link>
             <ThemeSwitcher />
+            <MobileMenu />
           </nav>
         </header>
         <main>{children}</main>
