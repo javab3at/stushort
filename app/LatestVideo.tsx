@@ -57,7 +57,7 @@ export default async function LatestVideo() {
   if (videos.length === 0) return null;
 
   return (
-    <section className="section">
+    <section id="video" className="section">
       <h2>Latest on YouTube</h2>
       <VideoPicker videos={videos} channelUrl={CHANNEL_URL} />
     </section>

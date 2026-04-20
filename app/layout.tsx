@@ -29,8 +29,9 @@ export default function RootLayout({
           </Link>
           <nav className="nav">
             <Link href="/#work">Work</Link>
+            <Link href="/#video">Video</Link>
             <Link href="/#about">About</Link>
-            <Link href="/book">Book</Link>
+            <Link href="/book">Enquire</Link>
             <ThemeSwitcher />
           </nav>
         </header>
